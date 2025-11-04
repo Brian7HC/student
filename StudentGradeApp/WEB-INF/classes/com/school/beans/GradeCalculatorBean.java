@@ -1,12 +1,8 @@
 package com.school.beans;
 
-/**
- * JavaBean class for calculating student grades.
- * This bean encapsulates the logic for computing total marks, average, and grade.
- */
+
 public class GradeCalculatorBean {
 
-    // Private instance variables
     private String studentName;
     private int subject1;
     private int subject2;
@@ -15,12 +11,9 @@ public class GradeCalculatorBean {
     private double average;
     private String grade;
 
-    // No-argument constructor
     public GradeCalculatorBean() {
-        // Initialize default values if needed
     }
 
-    // Getters and Setters
     public String getStudentName() {
         return studentName;
     }
@@ -68,7 +61,6 @@ public class GradeCalculatorBean {
         return grade;
     }
 
-    // Private method to compute total, average, and grade
     private void computeResults() {
         total = subject1 + subject2 + subject3;
         average = total / 3.0;
@@ -82,10 +74,5 @@ public class GradeCalculatorBean {
         } else {
             grade = "F";
         }
-    }
-
-    // Optionally, a public method to compute after setting all values
-    public void calculateGrade() {
-        // This can be called from JSP if needed, but compute is automatic on setter
     }
 }
